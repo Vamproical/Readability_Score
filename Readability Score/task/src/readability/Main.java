@@ -18,12 +18,11 @@ public class Main {
         return result.toString();
     }
     public static void main(String[] args) {
-        /*String inputPath = "";
+        String inputPath = "";
         for (int i = 0; i < args.length;  i++) {
             inputPath = args[0];
-        }*/
-        Scanner scanner = new Scanner(System.in);
-        String inputString = scanner.nextLine();//load(inputPath);
+        }
+        String inputString = load(inputPath);
         char[] charInputString = inputString.toCharArray();
         int countChar = 0;
         for (char c : charInputString) {
@@ -31,7 +30,7 @@ public class Main {
                 ++countChar;
             }
         }
-        String[] arrayInputString = inputString.replaceAll(",","").split("[.!?]".trim());
+        String[] arrayInputString = inputString.replaceAll("[,()]","").split("[.!?]".trim());
         int countWordsInSentence = 0;
         for (String str: arrayInputString) {
             String[] temp = str.split("\\b\\s|\\b\u00a0");
