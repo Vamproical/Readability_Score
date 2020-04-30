@@ -18,10 +18,7 @@ public class Main {
         return result.toString();
     }
     public static void main(String[] args) {
-        String inputPath = "";
-        for (int i = 0; i < args.length;  i++) {
-            inputPath = args[0];
-        }
+        String inputPath = args[0];
         String inputString = load(inputPath);
         char[] charInputString = inputString.toCharArray();
         int countChar = 0;
