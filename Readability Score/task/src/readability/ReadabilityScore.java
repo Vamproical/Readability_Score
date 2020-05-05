@@ -81,6 +81,7 @@ public class ReadabilityScore {
     }
 
     public void countScore(String namePathFile) throws IOException {
+        Scanner scanner = new Scanner(System.in);
         String inputString = load(namePathFile);
         int countChar = countCharInText(inputString);
         String[] arrayInputString = inputString.replaceAll("[,()]", "").split("[.!?]".trim());
@@ -98,7 +99,7 @@ public class ReadabilityScore {
         System.out.println("Sentences: " + arrayInputString.length);
         System.out.println("Characters: " + countChar);
         System.out.println("Syllables: " + countSyllable);
-        System.out.println("Polysyllables: : " + polysyllables);
+        System.out.println("Polysyllables: " + polysyllables);
         System.out.println("Enter the score you want to calculate (ARI, FK, SMOG, CL, all):");
         String[] grades = {"6", "7", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "24", "25"};
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
